@@ -1,82 +1,31 @@
 <div class="ms-head">
-    <div class="head-menu">
-        <div class="head-men-left head-menu-flex-center">
-            <a href="{ms:global.host/}/html/1/index.html">
-                <img src="http://cdn.mingsoft.net/images/logo.png" />
-            </a>
-
-            <ul class="head-menu-list">
-                {ms:channel type=nav ref=one}
-                <li class="head-menu-list-li"><a href="[field.typelink/]">[field.typetitle/]</a>
-                    <ul class="head-menu-son-list">
-                        {ms:channel  refs=one ref=two}
-                        <li>
-                        <a target="_blank" href="{ms:global.url/}[field.typelink/]">[field.typetitle/]</a>
-                        </li>
-                        {/ms:channel}
-                    </ul>
-                </li>
-                {/ms:channel}
-                <!--<li class="head-menu-list-li">走进铭飞-->
-                    <!--<ul class="head-menu-son-list">-->
-                        <!--<li>-->
-                            <!--<a target="_blank" href='{ms:global.url/}/53/index.html'>关于我们</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a target="_blank" href='{ms:global.url/}/59/index.html'>公司动态</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#faz'>发展历程</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a target="_blank" href='http://mingsoft.net/html/1//5527/index.html#lianx'>加入我们</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a target="_blank" href='{ms:global.url/}/19/141/index.html'>联系我们</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-                <!--<li class="head-menu-list-li">-->
-                    <!--<a href='{ms:global.url/}/149/index.html'>案例</a>-->
-                <!--</li>-->
-                <!--<li class="head-menu-list-li">-->
-                    <!--<a target="_blank" href='http://mstore.mingsoft.net/mstoreShow.do'>插件&模板</a>-->
-                    <!--&lt;!&ndash; <ul class="head-menu-son-list">-->
-                        <!--<li><a href='http://mstore.mingsoft.net/mstoreShow.do'>模板</a></li>-->
-                        <!--<li><a href='http://mstore.mingsoft.net/mstoreShow.do'>插件</a></li>-->
-                    <!--</ul> &ndash;&gt;-->
-                <!--</li>-->
-                <!--<li class="head-menu-list-li">-->
-                    <!--<a target="_blank" href='{ms:global.url/}/19/142/index.html'>在线留言</a>-->
-                <!--</li>-->
-                <!--<li class="head-menu-list-li">技术支持-->
-                    <!--<ul class="head-menu-son-list">-->
-                        <!--<li>-->
-                            <!--<a target="_blank" href='http://bbs.mingsoft.net/mbbs/main.do'>开源社区</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a target="_blank" href='https://gitee.com/mingSoft/MCMS'>源码下载</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                            <!--<a target="_blank" href='http://doc.ms.mingsoft.net/plugs-cms/'>使用手册</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</li>-->
-            </ul>
-        </div>
-        <div class="head-men-right head-menu-flex-center">
-            <div class="head-menu-flex-center head-menu-right-search">
-                <form id="searchDataForm" action="{ms:global.host/}/cms/1/search.do" method="post">
-                    <input type="text" class='ms-search-input' name="basic_title" placeholder="请输入关键字">
-                    <!-- <i class="iconfont ms-search-click">&#xe85e;</i> -->
-                    <input type="submit" value="" class="ms-search-click">
-                </form>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="work-time">
+                <i></i>
+                <span>9:00-20:00 (工作日) / 9:00-17:00 (节假日)</span>
             </div>
-            <div class="head-menu-right-content" id="ms-login-vue">
+            <div class="hot-tel">
+                <span>服务热线：<em>400-818-6636</em></span>
+            </div>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo"></div>
+            <div class="nav">
+                <ul>
+                    {ms:channel type=nav ref=one}
+                    <li><a href="[field.typelink/]">[field.typetitle/]</a>
+                        {/ms:channel}
+                </ul>
+            </div>
+            <div class="nav-login" id="ms-login-vue">
                 <span v-show="!isLogin" style="display: none;">
-                    <span>
-                        <a href='{ms:global.host/}/mcms/login.do'>登录</a>
-                    </span>|<span><a href='{ms:global.host/}/mcms/register.do'>注册</a></span>
+                <i></i>
+                <a href='{ms:global.host/}/mcms/login.do'>登录</a>
+                <span>|</span>
+                <a href='{ms:global.host/}/mcms/register.do'>注册</a>
                 </span>
                 <div class="topbar-info J_userInfo loginSuccess hide-default" v-show="isLogin" style="display: none;">
                     <a class="user-name" href="{ms:global.host/}/people/center.do">
@@ -87,7 +36,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 </div>
 <script>
     var headVue = new Vue({
